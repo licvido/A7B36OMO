@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Semestralka" default="compile">
+
+    <target name="clean">
+        <delete dir="build" />
+    </target>
+    
+    <target name="compile">
+        <mkdir dir="build" />
+        <mkdir dir="build/classes" />
+        <javac destdir="build/classes" srcdir="bank" />
+    </target>
+
+    <target name="build" depends="compile">
+        <jar destfile="build/semestralka.jar" basedir="build/classes" />
+    </target>
+    
+</project>
